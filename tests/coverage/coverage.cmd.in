@@ -1,0 +1,20 @@
+::
+:: Run OpenCppCoverage app with the following parameters:
+:: - modules to inspect: bc-lib-test.exe (bc-lib is a static library, 
+::                       hence here I must inspect a test executable)
+:: - sources to inspect: everything located in current project, except 
+::                       tests source itself (it isn't a functionality to cover)
+:: - excluded lines: else and closing brackets (well, that's how OpenCppCoverage works)
+:: - module to run: bc-lib-test.exe (executable with Google Tests)
+::
+
+@echo off
+
+OpenCppCoverage --modules bc-lib-test.exe                                     ^
+                --sources *\bc-lib\*                                          ^
+                --excluded_sources *\tests\*                                   ^
+                --excluded_line_regex "\s*else.*"                              ^
+                --excluded_line_regex "\s*\}.*"                                ^
+                --export_type cobertura:coverage-report.xml                    ^
+                --working_dir "@BCLIB_COV_RUNTIME_OUTPUT_DIRECTORY@"          ^
+                -- "@BCLIB_COV_RUNTIME_OUTPUT_DIRECTORY@\bc-lib-test.exe"
