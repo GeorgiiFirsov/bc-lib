@@ -35,6 +35,9 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        submodules: recursive
+        token: ${{ secrets.ACCESS_TOKEN }}
       
     - name: Configure
       run: cmake -Bbuild -DCMAKE_INSTALL_PREFIX="$HOME/$env:INSTALL_LOCATION"
