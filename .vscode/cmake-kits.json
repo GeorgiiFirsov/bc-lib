@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Clang for macOS with vcpkg",
+        "compilers": {
+          "C": "/usr/local/opt/llvm/bin/clang",
+          "CXX": "/usr/local/opt/llvm/bin/clang++"
+        },
+        "toolchainFile": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    }
+]
