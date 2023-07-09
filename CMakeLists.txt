@@ -92,32 +92,24 @@ endif (NOT BCLIB_BUILD_LIB AND BCLIB_BUILD_TESTS)
 # - propagate kernel lib building flag
 # - disable documentation generation
 #
-option(GALOISLIB_KERNEL_MODE ""             ${BCLIB_BUILD_KERNEL_LIB})
-option(GALOISLIB_GENERATE_DOCS ""           OFF)
+include(FetchContent)
+
+FetchContent_Declare(
+    galois-lib
+    GIT_REPOSITORY https://github.com/GeorgyFirsov/galois-lib.git
+    GIT_TAG        v1.0.2
+    CMAKE_ARGS     -DGALOISLIB_GENERATE_DOCS=OFF
+                   -DGALOISLIB_KERNEL_MODE=${BCLIB_BUILD_KERNEL_LIB}
+)
+
+FetchContent_MakeAvailable(galois-lib)
 
 #
 # Set global directories
 #
 set(BCLIB_ROOT		                        ${CMAKE_CURRENT_LIST_DIR})
 set(BCLIB_LIB_ROOT	                        ${BCLIB_ROOT}/bc-lib)
-
-if (PROJECT_IS_TOP_LEVEL)
-
-    #
-    # Suppress warning -- not writing PARENT_SCOPE
-    #
-
-    set(BCLIB_INCLUDE                       ${BCLIB_LIB_ROOT}/include)
-
-else (PROJECT_IS_TOP_LEVEL)
-
-    #
-    # Share public variables with parent projects
-    #
-
-    set(BCLIB_INCLUDE                       ${BCLIB_LIB_ROOT}/include PARENT_SCOPE)
-
-endif (PROJECT_IS_TOP_LEVEL)
+set(BCLIB_INCLUDE                           ${BCLIB_LIB_ROOT}/include)
 
 #
 # Set output directories for all targets
@@ -148,11 +140,6 @@ if (BCLIB_BUILD_LIB)
     # Preprocessor definitions
     #
     add_compile_definitions(UNICODE)
-    
-    #
-    # Dependencies
-    #
-    add_subdirectory(galois-lib)
 
     #
     # Main library target

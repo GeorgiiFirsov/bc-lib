@@ -5,7 +5,7 @@ set(BCLIB_SOURCES_ROOT				                ${BCLIB_LIB_ROOT}/src)
 set(BCLIB_INCLUDE_ROOT				                ${BCLIB_LIB_ROOT}/include)
 
 set(BCLIB_INCLUDE_DIRECTORIES		                ${BCLIB_INCLUDE_ROOT}
-													${GALOISLIB_INCLUDE})
+													${galois-lib_SOURCE_DIR}/include)
 													
 #
 # Implementation directories
