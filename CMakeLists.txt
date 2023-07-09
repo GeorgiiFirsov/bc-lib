@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(bc-lib VERSION 1.0.2)
+project(bc-lib VERSION 1.0.3)
 
 #
 # Global config
@@ -94,12 +94,13 @@ endif (NOT BCLIB_BUILD_LIB AND BCLIB_BUILD_TESTS)
 #
 include(FetchContent)
 
+option(GALOISLIB_GENERATE_DOCS ""                       OFF)
+option(GALOISLIB_KERNEL_MODE ""                         ${BCLIB_BUILD_KERNEL_LIB})
+
 FetchContent_Declare(
     galois-lib
     GIT_REPOSITORY https://github.com/GeorgyFirsov/galois-lib.git
     GIT_TAG        v1.0.3
-    CMAKE_ARGS     -DGALOISLIB_GENERATE_DOCS=OFF
-                   -DGALOISLIB_KERNEL_MODE=${BCLIB_BUILD_KERNEL_LIB}
 )
 
 FetchContent_MakeAvailable(galois-lib)
