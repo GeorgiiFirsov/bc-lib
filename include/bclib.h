@@ -15,6 +15,7 @@
 // Just list necessary headers here
 //
 
+#include "common/utils.h"
 #include "common/interface.h"
 #include "ciphers/kuznyechik/kuznyechik.h"
 
