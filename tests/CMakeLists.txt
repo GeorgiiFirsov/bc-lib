@@ -11,7 +11,7 @@ set(BCLIB_TESTS_INCLUDE                         ${BCLIB_TESTS_ROOT}/include)
 set(BCLIB_TESTS_CASES                           ${BCLIB_TESTS_ROOT}/cases)
 set(BCLIB_TESTS_COVERAGE                        ${BCLIB_TESTS_ROOT}/coverage)
 
-set(BCLIB_TESTS_INCLUDE_DIRECTORIES	            ${BCLIB_INCLUDE}
+set(BCLIB_TESTS_INCLUDE_DIRECTORIES	            ${BCLIB_INCLUDE_DIRECTORIES}
                                                 ${BCLIB_TESTS_INCLUDE}
                                                 ${gtest_SOURCE_DIR}/include 
                                                 ${gtest_SOURCE_DIR})
