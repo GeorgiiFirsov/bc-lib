@@ -1,4 +1,0 @@
-var dir_d68e1f0f3c15984985c518250cca4ada =
-[
-    [ "kuznyechik", "dir_90beb5516973476510573dff99837c18.html", "dir_90beb5516973476510573dff99837c18" ]
-];
