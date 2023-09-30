@@ -5,6 +5,7 @@
 !/.clang-format
 !/.clang-tidy
 !/.vscode
+!/.devcontainer
 
 # Specific files
 CMakeSettings.json
