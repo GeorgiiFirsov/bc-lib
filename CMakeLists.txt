@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(bc-lib VERSION 1.0.5)
+cmake_minimum_required(VERSION 3.5.0)
+project(bc-lib VERSION 1.0.6)
 
 #
 # Global config
