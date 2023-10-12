@@ -908,8 +908,8 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = @BCLIB_LIB_ROOT@/include \
-                         @BCLIB_LIB_ROOT@/src \
+INPUT                  = @BCLIB_ROOT@/include \
+                         @BCLIB_ROOT@/src \
                          @BCLIB_ROOT@/README.md
 
 # This tag can be used to specify the character encoding of the source files
