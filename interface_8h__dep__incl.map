@@ -1,0 +1,6 @@
+<map id="include/common/interface.h" name="include/common/interface.h">
+<area shape="rect" id="node1" title="Generic block cipher interface declaration." alt="" coords="29,5,233,32"/>
+<area shape="rect" id="node2" href="$bclib_8h.html" title="Main library header." alt="" coords="5,177,121,203"/>
+<area shape="rect" id="node3" href="$kuznyechik_8h.html" title="Kuznyechik block cipher." alt="" coords="101,80,298,121"/>
+<area shape="rect" id="node4" href="$kuznyechik_8c.html" title="Kuznyechik block cipher." alt="" coords="145,169,315,211"/>
+</map>

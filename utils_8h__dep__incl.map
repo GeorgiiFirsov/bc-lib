@@ -1,0 +1,7 @@
+<map id="include/common/utils.h" name="include/common/utils.h">
+<area shape="rect" id="node1" title="Some helpers." alt="" coords="87,5,261,32"/>
+<area shape="rect" id="node2" href="$bclib_8h.html" title="Main library header." alt="" coords="5,251,121,278"/>
+<area shape="rect" id="node3" href="$interface_8h.html" title="Generic block cipher interface declaration." alt="" coords="72,80,276,107"/>
+<area shape="rect" id="node5" href="$kuznyechik_8c.html" title="Kuznyechik block cipher." alt="" coords="197,244,367,285"/>
+<area shape="rect" id="node4" href="$kuznyechik_8h.html" title="Kuznyechik block cipher." alt="" coords="101,155,298,196"/>
+</map>

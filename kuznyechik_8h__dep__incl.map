@@ -1,0 +1,5 @@
+<map id="include/ciphers/kuznyechik/kuznyechik.h" name="include/ciphers/kuznyechik/kuznyechik.h">
+<area shape="rect" id="node1" title="Kuznyechik block cipher." alt="" coords="47,5,245,47"/>
+<area shape="rect" id="node2" href="$bclib_8h.html" title="Main library header." alt="" coords="5,102,121,129"/>
+<area shape="rect" id="node3" href="$kuznyechik_8c.html" title="Kuznyechik block cipher." alt="" coords="145,95,315,136"/>
+</map>

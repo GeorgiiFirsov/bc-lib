@@ -1,0 +1,9 @@
+<map id="src/ciphers/kuznyechik/kuznyechik.c" name="src/ciphers/kuznyechik/kuznyechik.c">
+<area shape="rect" id="node1" title="Kuznyechik block cipher." alt="" coords="166,5,335,47"/>
+<area shape="rect" id="node2" href="$kuznyechik_8h.html" title="Kuznyechik block cipher." alt="" coords="65,95,212,136"/>
+<area shape="rect" id="node4" href="$utils_8h.html" title="Some helpers." alt="" coords="5,259,128,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="175,259,278,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="289,102,378,129"/>
+<area shape="rect" id="node7" title=" " alt="" coords="402,102,497,129"/>
+<area shape="rect" id="node3" href="$interface_8h.html" title="Generic block cipher interface declaration." alt="" coords="59,184,213,211"/>
+</map>
