@@ -53,21 +53,35 @@ typedef struct tagBLOCK_CIPHER
 
     /**
 	 * @brief Block encryption procedure.
+     *
+     * @param in Plaintext block
+     * @param round_keys Initialized key schedule for encryption
+     * @param out Ciphertext block
 	 */
     void (*encrypt_block)(const __m128i in, const KEY* round_keys, __m128i* out);
 
     /**
 	 * @brief Block decryption procedure.
+     *
+     * @param in Ciphertext block
+     * @param round_keys Initialized key schedule for decryption
+     * @param out Plaintext block
 	 */
     void (*decrypt_block)(const __m128i in, const KEY* round_keys, __m128i* out);
 
     /**
-	 * @brief Encryption key initialization procedure.
+	 * @brief Encryption key schedule initialization procedure.
+     *
+     * @param key Binary key representation
+     * @param round_keys Key schedule for encryption to initialize
 	 */
     void (*initialize_encrypt_key)(const unsigned char* key, KEY* round_keys);
 
     /**
-	 * @brief Decryption key initialization procedure.
+	 * @brief Decryption key schedule initialization procedure.
+     * 
+     * @param key Binary key representation
+     * @param round_keys Key schedule for decryption to initialize
 	 */
     void (*initialize_decrypt_key)(const unsigned char* key, KEY* round_keys);
 } BLOCK_CIPHER;
