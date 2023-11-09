@@ -38,7 +38,7 @@ BCLIB_STATIC_ASSERT(sizeof(uint64_t) == 8, wrong_64_bit_type);
 
 
 /**
- * @brief 
+ * @brief Internal Kuznyechik key structure.
  */
 typedef struct tagINTERNAL_KEY
 {
@@ -329,7 +329,7 @@ static void kuznyechik_encrypt_block(const __m128i in, const KEY* round_keys, __
 
     //
     // Chapter 4.4.1 of GOST 34.12-2018
-    // �(a) = X[K10] LS X[K9] ... LS X[K2] LS X[K1](a)
+    // E(a) = X[K10] LS X[K9] ... LS X[K2] LS X[K1](a)
     //
 
     __m128i temporary                 = in;
@@ -372,7 +372,7 @@ static void kuznyechik_decrypt_block(const __m128i in, const KEY* round_keys, __
 
     //
     // Chapter 4.4.2 of GOST 34.12-2018
-    // D(�) = X[K1] ILS X[K2] ... ILS X[K9] ILS X[K10](a)
+    // D(a) = X[K1] ILS X[K2] ... ILS X[K9] ILS X[K10](a)
     //
 
     __m128i temporary                 = in;
