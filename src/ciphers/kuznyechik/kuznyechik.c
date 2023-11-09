@@ -2,7 +2,6 @@
  * @file kuznyechik.c
  * @author Georgy Firsov (gfirsov007@gmail.com)
  * @brief Kuznyechik block cipher
- * @version 0.1
  * @date 2023-07-07
  * 
  * @copyright Copyright (c) 2023
