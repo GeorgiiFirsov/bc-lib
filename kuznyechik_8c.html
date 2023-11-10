@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bc-lib
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Library with block ciphers implementation</div>
   </td>
@@ -112,6 +112,7 @@ Include dependency graph for kuznyechik.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtagINTERNAL__KEY.html">tagINTERNAL_KEY</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal Kuznyechik key structure.  <a href="structtagINTERNAL__KEY.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -153,7 +154,8 @@ typedef unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a
 <tr class="memdesc:aaa5d1cd013383c889537491c3cfd9aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">64 bit type (defined here intentionally to be able not to include any of stdlib headers. <br /></td></tr>
 <tr class="separator:aaa5d1cd013383c889537491c3cfd9aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68bf10b0eb5eea66bc3ebc4a05e65bc2"><td class="memItemLeft" align="right" valign="top"><a id="a68bf10b0eb5eea66bc3ebc4a05e65bc2"></a>
-typedef struct <a class="el" href="structtagINTERNAL__KEY.html">tagINTERNAL_KEY</a>&#160;</td><td class="memItemRight" valign="bottom"><b>INTERNAL_KEY</b></td></tr>
+typedef struct <a class="el" href="structtagINTERNAL__KEY.html">tagINTERNAL_KEY</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kuznyechik_8c.html#a68bf10b0eb5eea66bc3ebc4a05e65bc2">INTERNAL_KEY</a></td></tr>
+<tr class="memdesc:a68bf10b0eb5eea66bc3ebc4a05e65bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal Kuznyechik key structure. <br /></td></tr>
 <tr class="separator:a68bf10b0eb5eea66bc3ebc4a05e65bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -162,22 +164,21 @@ Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BCLIB_STATIC_ASSERT</b> (sizeof(<a class="el" href="kuznyechik_8c.html#aaa5d1cd013383c889537491c3cfd9aad">uint64_t</a>)==8, wrong_64_bit_type)</td></tr>
 <tr class="separator:a9908480bde20f21ed59581baa857e088"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a162cb3113c0f938d94e56ea83ba5d95b"><td class="memItemLeft" align="right" valign="top"><a id="a162cb3113c0f938d94e56ea83ba5d95b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BCLIB_STATIC_ASSERT</b> (sizeof(<a class="el" href="structtagINTERNAL__KEY.html">INTERNAL_KEY</a>)&lt;=<a class="el" href="interface_8h.html#a61504903c4144f98e49063d95c67dc60">MAX_KEY_SIZE</a>, maximum_key_size_is_less_than_necessary)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BCLIB_STATIC_ASSERT</b> (sizeof(<a class="el" href="kuznyechik_8c.html#a68bf10b0eb5eea66bc3ebc4a05e65bc2">INTERNAL_KEY</a>)&lt;=<a class="el" href="interface_8h.html#a61504903c4144f98e49063d95c67dc60">MAX_KEY_SIZE</a>, maximum_key_size_is_less_than_necessary)</td></tr>
 <tr class="separator:a162cb3113c0f938d94e56ea83ba5d95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d0dbf9041e1cd531be8a6d34cf24de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kuznyechik_8c.html#a1d0dbf9041e1cd531be8a6d34cf24de5">kuznyechik_initialize_encrypt_key</a> (const unsigned char *key, <a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *round_keys)</td></tr>
-<tr class="memdesc:a1d0dbf9041e1cd531be8a6d34cf24de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kuznyechik encryption key initialization.  <a href="kuznyechik_8c.html#a1d0dbf9041e1cd531be8a6d34cf24de5">More...</a><br /></td></tr>
+<tr class="memitem:a1d0dbf9041e1cd531be8a6d34cf24de5"><td class="memItemLeft" align="right" valign="top"><a id="a1d0dbf9041e1cd531be8a6d34cf24de5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>kuznyechik_initialize_encrypt_key</b> (const unsigned char *key, <a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *round_keys)</td></tr>
 <tr class="separator:a1d0dbf9041e1cd531be8a6d34cf24de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb59e115dca3335f45e398dcbab9109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kuznyechik_8c.html#a4bb59e115dca3335f45e398dcbab9109">kuznyechik_initialize_decrypt_key</a> (const unsigned char *key, <a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *round_keys)</td></tr>
-<tr class="memdesc:a4bb59e115dca3335f45e398dcbab9109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kuznyechik decryption key initialization.  <a href="kuznyechik_8c.html#a4bb59e115dca3335f45e398dcbab9109">More...</a><br /></td></tr>
+<tr class="memitem:a4bb59e115dca3335f45e398dcbab9109"><td class="memItemLeft" align="right" valign="top"><a id="a4bb59e115dca3335f45e398dcbab9109"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>kuznyechik_initialize_decrypt_key</b> (const unsigned char *key, <a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *round_keys)</td></tr>
 <tr class="separator:a4bb59e115dca3335f45e398dcbab9109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1edbeb49843fbec8337cc7cb5ce79e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kuznyechik_8c.html#a1edbeb49843fbec8337cc7cb5ce79e7b">kuznyechik_initialize_interface</a> (<a class="el" href="interface_8h.html#a0c2ef3dca32c6efbd776428179670b1b">BLOCK_CIPHER</a> *cipher)</td></tr>
+<tr class="memitem:a1edbeb49843fbec8337cc7cb5ce79e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kuznyechik_8c.html#a1edbeb49843fbec8337cc7cb5ce79e7b">kuznyechik_initialize_interface</a> (BLOCK_CIPHER *cipher)</td></tr>
 <tr class="memdesc:a1edbeb49843fbec8337cc7cb5ce79e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes block cipher interface for Kuznyechik.  <a href="kuznyechik_8c.html#a1edbeb49843fbec8337cc7cb5ce79e7b">More...</a><br /></td></tr>
 <tr class="separator:a1edbeb49843fbec8337cc7cb5ce79e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kuznyechik block cipher. </p>
 <dl class="section author"><dt>Author</dt><dd>Georgy Firsov (<a href="#" onclick="location.href='mai'+'lto:'+'gfi'+'rs'+'ov0'+'07'+'@gm'+'ai'+'l.c'+'om'; return false;">gfirs<span style="display: none;">.nosp@m.</span>ov00<span style="display: none;">.nosp@m.</span>7@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-07-07</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -297,80 +298,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4bb59e115dca3335f45e398dcbab9109"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bb59e115dca3335f45e398dcbab9109">&#9670;&nbsp;</a></span>kuznyechik_initialize_decrypt_key()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kuznyechik_initialize_decrypt_key </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *&#160;</td>
-          <td class="paramname"><em>round_keys</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Kuznyechik decryption key initialization. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Binary key representation </td></tr>
-    <tr><td class="paramname">round_keys</td><td>Initialized key schedule for Kuznyechik decryption </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1d0dbf9041e1cd531be8a6d34cf24de5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d0dbf9041e1cd531be8a6d34cf24de5">&#9670;&nbsp;</a></span>kuznyechik_initialize_encrypt_key()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kuznyechik_initialize_encrypt_key </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a> *&#160;</td>
-          <td class="paramname"><em>round_keys</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Kuznyechik encryption key initialization. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Binary key representation </td></tr>
-    <tr><td class="paramname">round_keys</td><td>Initialized key schedule for Kuznyechik encryption </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a1edbeb49843fbec8337cc7cb5ce79e7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1edbeb49843fbec8337cc7cb5ce79e7b">&#9670;&nbsp;</a></span>kuznyechik_initialize_interface()</h2>
 
@@ -380,7 +307,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void kuznyechik_initialize_interface </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="interface_8h.html#a0c2ef3dca32c6efbd776428179670b1b">BLOCK_CIPHER</a> *&#160;</td>
+          <td class="paramtype">BLOCK_CIPHER *&#160;</td>
           <td class="paramname"><em>cipher</em></td><td>)</td>
           <td></td>
         </tr>

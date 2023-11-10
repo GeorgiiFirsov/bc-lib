@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['decrypt_5fblock_5',['decrypt_block',['../structtagBLOCK__CIPHER.html#a44a42393d07bc12e3530c204a7b522db',1,'tagBLOCK_CIPHER']]]
+  ['interface_2eh_8',['interface.h',['../interface_8h.html',1,'']]],
+  ['internal_5fkey_9',['INTERNAL_KEY',['../kuznyechik_8c.html#a68bf10b0eb5eea66bc3ebc4a05e65bc2',1,'kuznyechik.c']]]
 ];

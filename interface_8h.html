@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bc-lib
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Library with block ciphers implementation</div>
   </td>
@@ -88,7 +88,8 @@ $(document).ready(function(){initNavTree('interface_8h.html',''); initResizable(
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">interface.h File Reference</div>  </div>
 </div><!--header-->
@@ -118,9 +119,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtagKEY.html">tagKEY</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic key representation.  <a href="structtagKEY.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtagBLOCK__CIPHER.html">tagBLOCK_CIPHER</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block cipher dispatch table.  <a href="structtagBLOCK__CIPHER.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -132,6 +130,21 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#aa8bad2cd89820cdaf2a7f26392774014">MAX_BLOCK_SIZE</a>&#160;&#160;&#160;16</td></tr>
 <tr class="memdesc:aa8bad2cd89820cdaf2a7f26392774014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximal number of bytes in block supported. <br /></td></tr>
 <tr class="separator:aa8bad2cd89820cdaf2a7f26392774014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c3f39834114659ee9941c2a5c3edbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">BCLIB_ENCRYPT_BLOCK</a>(block_type)</td></tr>
+<tr class="memdesc:a44c3f39834114659ee9941c2a5c3edbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block encryption procedure.  <a href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">More...</a><br /></td></tr>
+<tr class="separator:a44c3f39834114659ee9941c2a5c3edbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7e4bd18b49efbb04271929462a88c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a5a7e4bd18b49efbb04271929462a88c5">BCLIB_DECRYPT_BLOCK</a>(block_type)</td></tr>
+<tr class="memdesc:a5a7e4bd18b49efbb04271929462a88c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block decryption procedure.  <a href="interface_8h.html#a5a7e4bd18b49efbb04271929462a88c5">More...</a><br /></td></tr>
+<tr class="separator:a5a7e4bd18b49efbb04271929462a88c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4be80c106bd951a5b7799aa3909609"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a7b4be80c106bd951a5b7799aa3909609">BCLIB_INIT_ENCRYPT_KEY</a>()</td></tr>
+<tr class="memdesc:a7b4be80c106bd951a5b7799aa3909609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encryption key schedule initialization procedure.  <a href="interface_8h.html#a7b4be80c106bd951a5b7799aa3909609">More...</a><br /></td></tr>
+<tr class="separator:a7b4be80c106bd951a5b7799aa3909609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e0ff53d8335d4ae0097e347e932c52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a29e0ff53d8335d4ae0097e347e932c52">BCLIB_INIT_DECRYPT_KEY</a>()</td></tr>
+<tr class="memdesc:a29e0ff53d8335d4ae0097e347e932c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decryption key schedule initialization procedure.  <a href="interface_8h.html#a29e0ff53d8335d4ae0097e347e932c52">More...</a><br /></td></tr>
+<tr class="separator:a29e0ff53d8335d4ae0097e347e932c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e2d4e73f602fd2f9cee3c1f5883604d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a9e2d4e73f602fd2f9cee3c1f5883604d">BCLIB_DEFINE_CIPHER_TABLE</a>(name,  block_type)</td></tr>
+<tr class="memdesc:a9e2d4e73f602fd2f9cee3c1f5883604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a block cipher dispatch table.  <a href="interface_8h.html#a9e2d4e73f602fd2f9cee3c1f5883604d">More...</a><br /></td></tr>
+<tr class="separator:a9e2d4e73f602fd2f9cee3c1f5883604d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -139,17 +152,182 @@ Typedefs</h2></td></tr>
 typedef struct <a class="el" href="structtagKEY.html">tagKEY</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a6505276297d37e7a70682c9240bc5744">KEY</a></td></tr>
 <tr class="memdesc:a6505276297d37e7a70682c9240bc5744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic key representation. <br /></td></tr>
 <tr class="separator:a6505276297d37e7a70682c9240bc5744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2ef3dca32c6efbd776428179670b1b"><td class="memItemLeft" align="right" valign="top"><a id="a0c2ef3dca32c6efbd776428179670b1b"></a>
-typedef struct <a class="el" href="structtagBLOCK__CIPHER.html">tagBLOCK_CIPHER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a0c2ef3dca32c6efbd776428179670b1b">BLOCK_CIPHER</a></td></tr>
-<tr class="memdesc:a0c2ef3dca32c6efbd776428179670b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block cipher dispatch table. <br /></td></tr>
-<tr class="separator:a0c2ef3dca32c6efbd776428179670b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a416e3e19f1b8ac41d26f2388f3d21abc"><td class="memItemLeft" align="right" valign="top"><a id="a416e3e19f1b8ac41d26f2388f3d21abc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8h.html#a416e3e19f1b8ac41d26f2388f3d21abc">BCLIB_DEFINE_CIPHER_TABLE</a> (BLOCK_CIPHER, __m128i)</td></tr>
+<tr class="memdesc:a416e3e19f1b8ac41d26f2388f3d21abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">128-bit block cipher dispatch table. <br /></td></tr>
+<tr class="separator:a416e3e19f1b8ac41d26f2388f3d21abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic block cipher interface declaration. </p>
 <dl class="section author"><dt>Author</dt><dd>Georgy Firsov (<a href="#" onclick="location.href='mai'+'lto:'+'gfi'+'rs'+'ov0'+'07'+'@gm'+'ai'+'l.c'+'om'; return false;">gfirs<span style="display: none;">.nosp@m.</span>ov00<span style="display: none;">.nosp@m.</span>7@gma<span style="display: none;">.nosp@m.</span>il.c<span style="display: none;">.nosp@m.</span>om</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-07-07</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a5a7e4bd18b49efbb04271929462a88c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7e4bd18b49efbb04271929462a88c5">&#9670;&nbsp;</a></span>BCLIB_DECRYPT_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BCLIB_DECRYPT_BLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">block_type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    void (*decrypt_block)(<span class="keyword">const</span> block_type in,   \</div>
+<div class="line">                          const <a class="code" href="structtagKEY.html">KEY</a>* round_keys, \</div>
+<div class="line">                          block_type* out)</div>
+<div class="ttc" id="astructtagKEY_html"><div class="ttname"><a href="structtagKEY.html">tagKEY</a></div><div class="ttdoc">Generic key representation.</div><div class="ttdef"><b>Definition:</b> interface.h:35</div></div>
+</div><!-- fragment -->
+<p>Block decryption procedure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Ciphertext block </td></tr>
+    <tr><td class="paramname">round_keys</td><td>Initialized key schedule for decryption </td></tr>
+    <tr><td class="paramname">out</td><td>Plaintext block </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e2d4e73f602fd2f9cee3c1f5883604d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e2d4e73f602fd2f9cee3c1f5883604d">&#9670;&nbsp;</a></span>BCLIB_DEFINE_CIPHER_TABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BCLIB_DEFINE_CIPHER_TABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">block_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">typedef</span> <span class="keyword">struct </span>tag##name                                                                      \</div>
+<div class="line">    {                                                                                             \</div>
+<div class="line">        unsigned <span class="keywordtype">char</span> block_size;                                      \</div>
+<div class="line">        unsigned <span class="keywordtype">char</span> key_size;                                          <a class="code" href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">\</a></div>
+<div class="line"><a class="code" href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">                                                                                                  \</a></div>
+<div class="line"><a class="code" href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">        BCLIB_ENCRYPT_BLOCK</a>(block_type);                        \</div>
+<div class="line">        BCLIB_DECRYPT_BLOCK(block_type);                        \</div>
+<div class="line">        BCLIB_INIT_ENCRYPT_KEY();         \</div>
+<div class="line">        BCLIB_INIT_DECRYPT_KEY();         \</div>
+<div class="line">    } name</div>
+<div class="ttc" id="ainterface_8h_html_a44c3f39834114659ee9941c2a5c3edbe"><div class="ttname"><a href="interface_8h.html#a44c3f39834114659ee9941c2a5c3edbe">BCLIB_ENCRYPT_BLOCK</a></div><div class="ttdeci">#define BCLIB_ENCRYPT_BLOCK(block_type)</div><div class="ttdoc">Block encryption procedure.</div><div class="ttdef"><b>Definition:</b> interface.h:53</div></div>
+</div><!-- fragment -->
+<p>Defines a block cipher dispatch table. </p>
+<p>Block ciphers with different block sizes are described using different dispatch tables intentionally to allow implementing algorithms with high performance for research purposes. </p>
+
+</div>
+</div>
+<a id="a44c3f39834114659ee9941c2a5c3edbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c3f39834114659ee9941c2a5c3edbe">&#9670;&nbsp;</a></span>BCLIB_ENCRYPT_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BCLIB_ENCRYPT_BLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">block_type</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    void (*encrypt_block)(<span class="keyword">const</span> block_type in,   \</div>
+<div class="line">                          const <a class="code" href="structtagKEY.html">KEY</a>* round_keys, \</div>
+<div class="line">                          block_type* out)</div>
+</div><!-- fragment -->
+<p>Block encryption procedure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Plaintext block </td></tr>
+    <tr><td class="paramname">round_keys</td><td>Initialized key schedule for encryption </td></tr>
+    <tr><td class="paramname">out</td><td>Ciphertext block </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a29e0ff53d8335d4ae0097e347e932c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e0ff53d8335d4ae0097e347e932c52">&#9670;&nbsp;</a></span>BCLIB_INIT_DECRYPT_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BCLIB_INIT_DECRYPT_KEY</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    void (*initialize_decrypt_key)(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* key, \</div>
+<div class="line">                                   KEY* round_keys)</div>
+</div><!-- fragment -->
+<p>Decryption key schedule initialization procedure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Binary key representation </td></tr>
+    <tr><td class="paramname">round_keys</td><td>Key schedule for decryption to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7b4be80c106bd951a5b7799aa3909609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4be80c106bd951a5b7799aa3909609">&#9670;&nbsp;</a></span>BCLIB_INIT_ENCRYPT_KEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BCLIB_INIT_ENCRYPT_KEY</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    void (*initialize_encrypt_key)(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* key, \</div>
+<div class="line">                                   KEY* round_keys)</div>
+</div><!-- fragment -->
+<p>Encryption key schedule initialization procedure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Binary key representation </td></tr>
+    <tr><td class="paramname">round_keys</td><td>Key schedule for encryption to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

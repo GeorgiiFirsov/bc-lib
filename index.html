@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bc-lib
-   &#160;<span id="projectnumber">1.0.7</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Library with block ciphers implementation</div>
   </td>
@@ -103,7 +103,7 @@ Kuznyechik (GOST 34.12-2018)</h2>
 <div class="line"><span class="comment">// Initialize block cipher interface (this is the only way to use ciphers)</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="structtagBLOCK__CIPHER.html">BLOCK_CIPHER</a> cipher;</div>
+<div class="line">BLOCK_CIPHER cipher;</div>
 <div class="line"><a class="code" href="kuznyechik_8h.html#a1edbeb49843fbec8337cc7cb5ce79e7b">kuznyechik_initialize_interface</a>(&amp;cipher);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//</span></div>
@@ -112,8 +112,8 @@ Kuznyechik (GOST 34.12-2018)</h2>
 <div class="line"> </div>
 <div class="line"><a class="code" href="structtagKEY.html">KEY</a> ekey;</div>
 <div class="line"><a class="code" href="structtagKEY.html">KEY</a> dkey;</div>
-<div class="line">cipher-&gt;<a class="code" href="structtagBLOCK__CIPHER.html#a511bda165607155422e5a0a3bd2e9b9c">initialize_encrypt_key</a>(binary_key, &amp;ekey);</div>
-<div class="line">cipher-&gt;<a class="code" href="structtagBLOCK__CIPHER.html#a9650641b42c48321253670b8ab96ea6a">initialize_decrypt_key</a>(binary_key, &amp;dkey);</div>
+<div class="line">cipher-&gt;initialize_encrypt_key(binary_key, &amp;ekey);</div>
+<div class="line">cipher-&gt;initialize_decrypt_key(binary_key, &amp;dkey);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// And now encrypt plaintext block</span></div>
@@ -121,20 +121,15 @@ Kuznyechik (GOST 34.12-2018)</h2>
 <div class="line"> </div>
 <div class="line">__m128i plaintext_block  = ...;</div>
 <div class="line">__m128i ciphertext_block = ...;</div>
-<div class="line">cipher-&gt;<a class="code" href="structtagBLOCK__CIPHER.html#add0219f21405f8410715cb901d59ba11">encrypt_block</a>(plaintext_block, &amp;ekey, &amp;ciphertext_block);</div>
+<div class="line">cipher-&gt;encrypt_block(plaintext_block, &amp;ekey, &amp;ciphertext_block);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Decryption is straightforward too</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"> </div>
 <div class="line">__m128i decrypted_block = ...;</div>
-<div class="line">cipher-&gt;<a class="code" href="structtagBLOCK__CIPHER.html#a44a42393d07bc12e3530c204a7b522db">decrypt_block</a>(ciphertext_block, &amp;dkey, &amp;decrypted_block);</div>
-<div class="ttc" id="akuznyechik_8h_html_a1edbeb49843fbec8337cc7cb5ce79e7b"><div class="ttname"><a href="kuznyechik_8h.html#a1edbeb49843fbec8337cc7cb5ce79e7b">kuznyechik_initialize_interface</a></div><div class="ttdeci">void kuznyechik_initialize_interface(BLOCK_CIPHER *cipher)</div><div class="ttdoc">Initializes block cipher interface for Kuznyechik.</div><div class="ttdef"><b>Definition:</b> kuznyechik.c:498</div></div>
-<div class="ttc" id="astructtagBLOCK__CIPHER_html"><div class="ttname"><a href="structtagBLOCK__CIPHER.html">tagBLOCK_CIPHER</a></div><div class="ttdoc">Block cipher dispatch table.</div><div class="ttdef"><b>Definition:</b> interface.h:50</div></div>
-<div class="ttc" id="astructtagBLOCK__CIPHER_html_a44a42393d07bc12e3530c204a7b522db"><div class="ttname"><a href="structtagBLOCK__CIPHER.html#a44a42393d07bc12e3530c204a7b522db">tagBLOCK_CIPHER::decrypt_block</a></div><div class="ttdeci">void(* decrypt_block)(const __m128i in, const KEY *round_keys, __m128i *out)</div><div class="ttdoc">Block decryption procedure.</div><div class="ttdef"><b>Definition:</b> interface.h:62</div></div>
-<div class="ttc" id="astructtagBLOCK__CIPHER_html_a511bda165607155422e5a0a3bd2e9b9c"><div class="ttname"><a href="structtagBLOCK__CIPHER.html#a511bda165607155422e5a0a3bd2e9b9c">tagBLOCK_CIPHER::initialize_encrypt_key</a></div><div class="ttdeci">void(* initialize_encrypt_key)(const unsigned char *key, KEY *round_keys)</div><div class="ttdoc">Encryption key initialization procedure.</div><div class="ttdef"><b>Definition:</b> interface.h:67</div></div>
-<div class="ttc" id="astructtagBLOCK__CIPHER_html_a9650641b42c48321253670b8ab96ea6a"><div class="ttname"><a href="structtagBLOCK__CIPHER.html#a9650641b42c48321253670b8ab96ea6a">tagBLOCK_CIPHER::initialize_decrypt_key</a></div><div class="ttdeci">void(* initialize_decrypt_key)(const unsigned char *key, KEY *round_keys)</div><div class="ttdoc">Decryption key initialization procedure.</div><div class="ttdef"><b>Definition:</b> interface.h:72</div></div>
-<div class="ttc" id="astructtagBLOCK__CIPHER_html_add0219f21405f8410715cb901d59ba11"><div class="ttname"><a href="structtagBLOCK__CIPHER.html#add0219f21405f8410715cb901d59ba11">tagBLOCK_CIPHER::encrypt_block</a></div><div class="ttdeci">void(* encrypt_block)(const __m128i in, const KEY *round_keys, __m128i *out)</div><div class="ttdoc">Block encryption procedure.</div><div class="ttdef"><b>Definition:</b> interface.h:57</div></div>
+<div class="line">cipher-&gt;decrypt_block(ciphertext_block, &amp;dkey, &amp;decrypted_block);</div>
+<div class="ttc" id="akuznyechik_8h_html_a1edbeb49843fbec8337cc7cb5ce79e7b"><div class="ttname"><a href="kuznyechik_8h.html#a1edbeb49843fbec8337cc7cb5ce79e7b">kuznyechik_initialize_interface</a></div><div class="ttdeci">void kuznyechik_initialize_interface(BLOCK_CIPHER *cipher)</div><div class="ttdoc">Initializes block cipher interface for Kuznyechik.</div><div class="ttdef"><b>Definition:</b> kuznyechik.c:471</div></div>
 <div class="ttc" id="astructtagKEY_html"><div class="ttname"><a href="structtagKEY.html">tagKEY</a></div><div class="ttdoc">Generic key representation.</div><div class="ttdef"><b>Definition:</b> interface.h:35</div></div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
