@@ -315,13 +315,6 @@ BCLIB_FORCEINLINE static void kuznyechikp_initialize_tables()
     }
 
 
-/**
- * @brief Kuznyechik block encryption.
- *
- * @param in Plaintext block
- * @param round_keys Initialized key schedule for Kuznyechik encryption
- * @param out Ciphertext block
- */
 static void kuznyechik_encrypt_block(const __m128i in, const KEY* round_keys, __m128i* out)
 {
     KUZNYECHIKP_XOR_LOOKUP_INIT();
@@ -358,13 +351,6 @@ static void kuznyechik_encrypt_block(const __m128i in, const KEY* round_keys, __
 }
 
 
-/**
- * @brief Kuznyechik block decryption.
- *
- * @param in Ciphertext block
- * @param round_keys Initialized key schedule for Kuznyechik decryption
- * @param out Plaintext block
- */
 static void kuznyechik_decrypt_block(const __m128i in, const KEY* round_keys, __m128i* out)
 {
     KUZNYECHIKP_XOR_LOOKUP_INIT();
@@ -402,12 +388,6 @@ static void kuznyechik_decrypt_block(const __m128i in, const KEY* round_keys, __
 }
 
 
-/**
- * @brief Kuznyechik encryption key initialization.
- *
- * @param key Binary key representation
- * @param round_keys Initialized key schedule for Kuznyechik encryption
- */
 void kuznyechik_initialize_encrypt_key(const unsigned char* key, KEY* round_keys)
 {
     //
@@ -470,12 +450,6 @@ void kuznyechik_initialize_encrypt_key(const unsigned char* key, KEY* round_keys
 }
 
 
-/**
- * @brief Kuznyechik decryption key initialization.
- * 
- * @param key Binary key representation
- * @param round_keys Initialized key schedule for Kuznyechik decryption
- */
 void kuznyechik_initialize_decrypt_key(const unsigned char* key, KEY* round_keys)
 {
     //
